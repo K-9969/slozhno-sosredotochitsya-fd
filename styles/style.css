@@ -1,5 +1,218 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: "IBM Plex Mono", sans-serif;
+  background-image: var(--page-bg-color-images);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: var(--basic-bg-color);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-inline: 10px; 
+}
+
+.header__decorative-text {
+  position: absolute;
+  right: 18px;
+  top: 7px;
+  display: flex;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--accent-color);
+}
+
+.header__decorative-text::after {
+  content: "";
+  display: inline-block;
+  place-self: center end;
+  margin-inline-start: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.theme-light {
+  & .header__decorative-text {
+    display: none;
+  }
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--design-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--design-color);
+}
+
+.header__theme-menu {
+  place-self: center end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  justify-content: center;
+  align-items: center;
+  inline-size: 70px;
+  block-size: 26px;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--design-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--design-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid var(--design-color); }
+
+.header__title {
+  place-self: center start;
+  font-weight: 700;
+  line-height: 83%;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--shadow-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+  place-self: center end;
+  margin-block-start: -19px;inline-size: 355px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--basic-color);
+  background-color: var(--accent-color);
+}
+
+.main {
+  display: grid;
+  gap: 51px;
+  padding-inline: 10px;
+  padding-block: 36px;
+}
+
+.main__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section__title {
+  inline-size: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--design-color);
+}
+
+.section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card-title-accent {
+  margin-block-start: 10px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.title-decor {
+  color: var(--basic-color);
+  background-color: var(--accent-color);
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--color-without-accent);
+}
+
+.card-text-links {
+  font-weight: 400;
+  color: var(--color-without-accent);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card-text-links:hover {
+  text-decoration: underline var(--color-without-accent);
+}
+
+.card-text-links:focus-visible {
+  outline: 1px solid var(--color-without-accent);
+}
+
+.main__section:last-child {
+  gap: 10px;
+}
+
+.card-image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-block-end: 10px;
+  margin-block-start: 10px;
+}
+
+.footer__title {
+  place-self: center;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--shadow-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
