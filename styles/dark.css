@@ -10,4 +10,24 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --page-bg-color-images: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070;
+  --color-without-accent: #F1B2CE;
+  --basic-color: #000028;
+  --basic-bg-color: #000028;
+  --shadow-color: #DB00FF;
+  --design-color: var(--accent-color);
+  --button-hover-color: #FF007066;
+
+}
+@media (prefers-color-scheme: no-preference) {
+  :root {
+    --page-bg-color-images: url(../images/cover-image-dark.png);
+    --accent-color: #FF0070;
+    --color-without-accent: #F1B2CE;
+    --basic-color: #000028;
+    --basic-bg-color: #000028;
+    --shadow-color: #DB00FF;
+    --design-color: var(--accent-color);
+    --button-hover-color: #FF007066;
+  }
 }
