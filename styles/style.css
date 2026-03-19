@@ -15,7 +15,7 @@
   grid-template-rows: 1fr min-content 1fr;
   grid-template-columns: var(--header-template-columns);
   block-size: 100vh;
-  min-block-size: var(--header-min-size-block); 
+  min-block-size: var(--header-min-size-block);
   padding-inline: var(--header-padding-inline);
   padding-block: var(--header-padding-block);
 }
@@ -52,7 +52,7 @@
   content: "";
   position: absolute;
   top: var(--top-position-element-decor);
-  right: var(--right-position-element-decor); 
+  right: var(--right-position-element-decor);
   width: 25px;
   height: 25px;
   border-width: 1px 1px 0px 0px;
@@ -73,7 +73,7 @@
 }
 
 .header__theme-menu {
-  place-self: var(--place-self-theme-menu); 
+  place-self: var(--place-self-theme-menu);
   grid-column: var(--grid-column-theme-menu);
 }
 
@@ -113,7 +113,7 @@
   place-self: center start;
   font-weight: 700;
   line-height: 83%;
-  font-size: var(--font-size-header-title); 
+  font-size: var(--font-size-header-title);
   color: var(--shadow-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
