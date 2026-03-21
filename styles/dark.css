@@ -17,6 +17,27 @@
   --shadow-color: #DB00FF;
   --design-color: var(--accent-color);
   --button-hover-color: #FF007066;
+  --visibil-text-decor: flex;
+  --header-padding-block: 5px 0;
+  --description-margin-block: -12px 0;
+  --footer-margin-block: 0 0;
+  --gap-block: 40.5px;
+  --header-min-size-block: 668px;
+  --header-padding-inline: 10px 10px;
+  --right-position-text-decor: 19.5px;
+  --top-posotion-text-decor: 11px;
+  --padding-block-decr-text: initial;
+  --right-position-element-decor: 10px;
+  --left-position-element-decor: 10px;
+  --top-position-element-decor: 10px;
+  --bottom-position-element-decor: 10px;
+  --place-self-theme-menu: center end;
+  --header-template-columns: auto;
+  --grid-column-theme-menu: 1;
+  --font-size-header-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --inline-size-description: 355px;
+  --main-gap-block: 51px;
+  --main-section-padding-block: initial initial;
 
 }
 @media (prefers-color-scheme: no-preference) {

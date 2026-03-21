@@ -7,8 +7,25 @@
     --padding-block-decr-text: 14px initial;
     --top-posotion-text-decor: 20.5px;
     --top-position-element-decor: 20px;
+    --place-self-theme-menu: start center;
+    --grid-column-theme-menu: 1 / 3;
+    --inline-size-description: 491px;
+    --main-gap-block: 80.6px;
+    --main-section-padding-block: initial initial;
+    --menu-padding-inline-start: 20px;
+    --menu-padding-block-start: 18px;
     --bottom-position-element-decor: 20px;
-    --right-position-element-decor: 20px;
+    --footer-margin-block: 0 0;
+    --footer-title-padding-block:0 0;
+  }
+
+  :root.theme-dark {
+    --gap-block: 60px;
+    --description-margin-block: 0 21px;
+    --header-min-size-block: 768px;
+    --header-padding-block: 0;
+    --padding-block-decr-text: 14px initial;
+    --top-posotion-text-decor: 20.5px;
     --top-position-element-decor: 20px;
     --place-self-theme-menu: start center;
     --grid-column-theme-menu: 1 / 3;
@@ -17,36 +34,22 @@
     --main-section-padding-block: initial initial;
     --menu-padding-inline-start: 20px;
     --menu-padding-block-start: 18px;
+    --bottom-position-element-decor: 20px;
     --footer-margin-block: 0 0;
+    --footer-title-padding-block:0 0;
   }
 
   :root.theme-light {
-    --top-position-element-decor: 20px;
-    --bottom-position-element-decor: 20px;
-    --header-padding-block: 3.5px 1px;
-    --description-margin-block: -21.5px 0;
-    --gap-block: 60.1px;
-    --footer-margin-block: 0 0;
-    --menu-padding-block-start: 14.6px;
-    .footer {
-      --top-position-element-decor: 20px;
-      --bottom-position-element-decor: 20px;
-    }
+    --header-margin-block: 0;
+    --footer-margin-block: 2px 0;
+    --footer-title-padding-block: 0 0;
   }
 
   @media (prefers-color-scheme: light) {
     :root {
-      --top-position-element-decor: 20px;
-      --bottom-position-element-decor: 20px;
-      --header-padding-block: 3.5px 1px;
-      --description-margin-block: -21.5px 0;
-      --gap-block: 60.1px;
-      --footer-margin-block: 0 0;
-      --menu-padding-block-start: 14.6px;
-      .footer {
-        --top-position-element-decor: 20px;
-        --bottom-position-element-decor: 20px;
-      }
+      --header-margin-block: 0;
+      --footer-margin-block: 2px 0;
+      --footer-title-padding-block: 0 0;
     }
   }
 
@@ -63,24 +66,17 @@
     padding-inline-start: 0;
   }
 
-  .section__decline-concentration {
+  .section__card-group {
     .section__card {
       grid-column: initial;
-      grid-row: 2;
-      padding-inline-start: initial;
-  
     }
   }
-
+  
   .section__gallery {
     gap: 20px;
   }
 
   .main__section:nth-child(3) {
     padding-block-start: 0;
-  }
-
-  .footer {
-    padding-block-end: 0;
   }
 }

@@ -18,6 +18,7 @@
   min-block-size: var(--header-min-size-block);
   padding-inline: var(--header-padding-inline);
   padding-block: var(--header-padding-block);
+  margin-block: var(--header-margin-block);
 }
 
 .header__decorative-text {
@@ -51,6 +52,7 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
+  place-self: start end;
   top: var(--top-position-element-decor);
   right: var(--right-position-element-decor);
   width: 25px;
@@ -63,6 +65,7 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
+  place-self: end start;
   bottom: var(--bottom-position-element-decor);
   left: var(--left-position-element-decor);
   width: 25px;
@@ -124,8 +127,6 @@
   inline-size: var(--inline-size-description);
   font-weight: 700;
   font-size: 18px;
-  color: var(--basic-color);
-  background-color: var(--accent-color);
 }
 
 .main {
@@ -139,6 +140,11 @@
   grid-template-columns: 1fr;
   gap: 20px;
   padding-block: var(--main-section-padding-block);
+}
+
+.section__card-group {
+  display: grid;
+  gap: 20px;
 }
 
 .section__title {
@@ -184,8 +190,7 @@
 }
 
 .card-text-links:hover {
-  border: 0 0 2px 0;
-  border-color: var(--color-without-accent);
+  border-bottom: 2px solid var(--color-without-accent);
 }
 
 .card-text-links:focus-visible {
@@ -213,6 +218,7 @@
 
 .footer__title {
   place-self: center;
+  padding-block: var(--footer-title-padding-block);
   font-weight: 700;
   font-size: var(--font-size-header-title);
   color: var(--shadow-color);
